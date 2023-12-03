@@ -4,13 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
+    "deploy": "npm run build && surge ./dist learnwebpack-gerda.surge.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "purgecss-webpack-plugin": "^5.0.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "vue-loader": "^17.3.1",
+    "vue-template-compiler": "^2.7.15",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.2",
+    "dotenv": "^16.3.1",
+    "glob": "^10.3.10",
+    "leaflet": "^1.9.4",
+    "surge": "^0.23.1",
+    "vue": "^3.3.9",
+    "vue-router": "^4.2.5"
   }
 }
