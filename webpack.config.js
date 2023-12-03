@@ -10,8 +10,6 @@ import Dotenv from 'dotenv-webpack';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-let views = fs.readdirSync('./src/views')
-
 export default {
     entry: './src/index.js',
     output: {
