@@ -27,7 +27,7 @@ export default {
         compress: true,
     },
     module:{
-        rule: [
+        rules: [
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader , 'css-loader']
