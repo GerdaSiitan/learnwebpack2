@@ -42,6 +42,13 @@ export default {
                 test: /\.vue$/,
                 loader: 'vue-loader'
             },
+            {
+                test: /\.png/,
+                type: 'asset/resource',
+                generator: {
+                    filename: '[name][ext]'
+                }
+            }
         ]
     },
     plugins: [
@@ -50,7 +57,7 @@ export default {
         }),
 
         //new MiniCssExtractPlugin(),
-        
+
         new PurgeCSSPlugin(),
         new VueLoaderPlugin(),
         new Dotenv()
