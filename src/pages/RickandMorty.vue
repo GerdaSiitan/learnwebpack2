@@ -4,6 +4,7 @@
         <button class="btn btn-primary" @click="prev" :disabled="!info.prev">Previous</button>
         <button class="btn btn-primary" @click="next" :disabled="!info.next">Next</button>
         <div class="row">
+            <div class="col-3 mt-3" v-for="char in results">
                 <div class="card">
                     <img :src="char.image" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -25,6 +26,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </template>
 
 <script>

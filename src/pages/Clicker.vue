@@ -8,9 +8,14 @@
         Column
       </div>
       <div class="col">
+        <button v-for="(upgrade, name) in upgrades"
+          class="btn btn-outline-primary py-3"
+          :disabled="cookies<upgrade.price"
+          @click="buyUpgrade(upgrade)">
           Buy {{ name }} for 
           {{ upgrade.price }} clicks ({{upgrade.cps}} clicks per second)
           {{ upgrade.count }}
+        </button>
       </div>
     </div>
   </template>
@@ -49,4 +54,3 @@
       }
   }
   </script>
-  
